@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { ReactComponent as ArrowLeft } from '@/assets/arrow-left.svg';
 import { ReactComponent as ArrowRight } from '@/assets/arrow-right.svg';
-import { isSameDay, isSameMonth, formatDateToMonthYear } from './helper';
+import { isSameDay, isSameMonth, formatDateToMonthYear } from '@/helper';
 
 interface DateSectionProps {
   renderDate: Date;

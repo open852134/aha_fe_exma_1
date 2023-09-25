@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { formatShortDate } from './helper';
+import { formatShortDate } from '@/helper';
 import DateSection from './DateSection';
 import YearSection from './YearSection';
 
