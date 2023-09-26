@@ -15,8 +15,14 @@ module.exports = {
   rules: {
     'no-shadow': 'off',
     'import/prefer-default-export': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'ts', 'tsx'] }],
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', 'ts', 'tsx'] },
+    ],
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
     'react/function-component-definition': [
       2,
       {
@@ -45,6 +51,10 @@ module.exports = {
       {
         html: 'ignore',
       },
+    ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.ts', '**/*.spec.ts'] },
     ],
   },
   settings: {
