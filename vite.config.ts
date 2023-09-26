@@ -14,6 +14,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/aha_fe_exma_1/',
   build: {
     sourcemap: true,
   },
