@@ -50,8 +50,8 @@ const Calendar: React.FC<CalendarProps> = ({
 
   return (
     <div className="relative shadow-aha bg-[#1B1B1B] text-white max-w-[320px] overflow-hidden font-[Inter]">
-      <p className="pt-[17px] pl-[24px] mb-1 text-[16px] leading-6">Text</p>
-      <p className="pl-[24px] text-[32px] leading-[1.375]">
+      <p className="pt-[17px] pl-[24px] font-normal mb-1 text-[16px] leading-6">Text</p>
+      <p className="pl-[24px] text-[32px] font-bold leading-[1.375] mb-[15px]">
         {formatShortDate(renderDate)}
       </p>
 
@@ -81,11 +81,11 @@ const Calendar: React.FC<CalendarProps> = ({
       </main>
 
       <section className="mt-3 mb-4 pr-[27px] text-right">
-        <button className="py-2 px-4" type="button" onClick={onCancel}>
+        <button className="py-2 px-4 text-sm" type="button" onClick={onCancel}>
           Cancel
         </button>
         <button
-          className="py-2 px-4"
+          className="py-2 px-4 text-sm"
           type="button"
           onClick={() => onConfirm(selectedDate)}
         >

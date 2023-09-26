@@ -56,6 +56,7 @@ const App = () => {
         <div className="w-[1219px] h-[907px] bg-[#181818] shadow p-[150px]">
           <h2 className="text-white text-2xl mb-10">Calendar Input</h2>
           <CalendarInput
+            label="Birthday"
             onChange={(date) => setDateInput(date)}
             value={dateInput}
             onClear={() => setDateInput(null)}

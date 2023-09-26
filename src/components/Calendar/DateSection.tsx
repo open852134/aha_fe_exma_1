@@ -64,7 +64,7 @@ const DateSection: React.FC<DateSectionProps> = ({
 
         <div className="px-[16px] grid grid-cols-7 gap-x-[6px] mb-3">
           {days.map((day) => (
-            <span className="text-[11px] text-center text-[#929292]">
+            <span key={day} className="text-[11px] text-center text-[#929292]">
               {day}
             </span>
           ))}

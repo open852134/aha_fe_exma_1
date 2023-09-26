@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { InputField } from '@/components/InputField';
 import { ReactComponent as CheckmarkActive } from '@/assets/checkmark-active.svg';
 import { ReactComponent as Checkmark } from '@/assets/checkmark.svg';
 
-interface PasswordInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface PasswordInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const PasswordInput: React.FC<PasswordInputProps> = ({
   placeholder = 'Password',
@@ -53,13 +55,10 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
   };
 
   return (
-    <div className="relative w-[335px] box-border">
-      <span className="absolute px-[4px] top-[-7.5px] left-[16px] text-[12px] text-white z-10 after:absolute after:bg-[#181818] after:content-[''] after:w-full after:h-1/2 after:z-[-1] after:top-[7.5px] after:left-[50%] after:translate-x-[-50%]">
-        Password
-      </span>
-      <input
+    <div className="relative w-[335px] box-border font-[Ubuntu]">
+      <InputField
+        label="Password"
         type="password"
-        className="transition h-[58px] px-[12px] w-full text-[16px] text-white bg-[#181818] border-[3px] border-[#FFFFFF80] placeholder-opacity-30 placeholder-white rounded-[8px] focus:border-[#00A3FF] focus:outline-none hover:border-white  hover:outline-none"
         required
         value={value}
         placeholder={placeholder}
@@ -68,13 +67,15 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
       />
 
       {password && (
-        <div className="w-full bg-[#242424] mt-3 absolute py-[8px] px-[12px] z-20">
+        <div className="w-full bg-[#242424] mt-[20px] absolute py-[8px] px-[12px] z-20 rounded-[8px]">
           {passwordRule.map(({ label, valid }) => (
-            <div className="flex items-center">
+            <div className="flex items-center mb-[5px]">
               <span className="mr-[10px] w-[20px] h-[20px]]\">
                 {valid ? <CheckmarkActive /> : <Checkmark />}
               </span>
-              <p className="text-white py-[8px] pr-[16px]">{label}</p>
+              <p className="text-white py-[8px] pr-[16px] text-sm tracking-[0.25px] leading-[1.5]">
+                {label}
+              </p>
             </div>
           ))}
         </div>
