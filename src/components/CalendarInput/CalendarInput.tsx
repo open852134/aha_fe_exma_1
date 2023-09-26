@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Calendar } from '@/components/Calendar';
 import { InputField } from '@/components/InputField';
 import { ReactComponent as CloseButton } from '@/assets/close.svg';
+import classNames from 'classnames';
 
 interface CalendarInputProps {
   label: string;
@@ -36,6 +37,7 @@ const CalendarInput: React.FC<CalendarInputProps> = ({
         required
         readOnly
         placeholder={placeholder}
+        className={classNames(isOpenCalendar && 'border-white')}
         onFocus={() => setIsOpenCalendar(true)}
         value={
           value
